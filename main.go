@@ -9,7 +9,7 @@ import (
 
 func requestWeatherApi(city string) string {
 	api_key := os.Getenv("WEATHER_API_KEY")
-	url := "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + api_key
+	url := "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + api_key + "&units=metric"
 
 	// HTTP Get Request
 	resp, err := http.Get(url)
